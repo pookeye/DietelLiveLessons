@@ -1,4 +1,5 @@
 //Constructor Example
+//this is basically a special method to initialize the class Member automatically at the time it was created
 
 
 #include <iostream>
@@ -14,10 +15,14 @@ class GradeBook
 {
 public:
     //constructor initializes courseName with string supplied as argument
+    //not allowed to be int or void or anything. Name of Class verbatim.
     GradeBook ( string name)
     {
-        setCourseName(name);
-    }
+        //good practice to use its own class functions
+        setCourseName(name); //call set function to initiliaze the courseName
+    }//end GradeBook Constructor
+    
+    //function to set the course's name
     void setCourseName( string name )
     {
         courseName = name; //store the course name in the object
